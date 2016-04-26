@@ -712,7 +712,8 @@ char *trim(char *string)
 			break;
 
 	if(head != string) 
-		memcpy(string, head, (tail-head+2 )*sizeof(char));
+		/*memcpy(string, head, (tail-head+2 )*sizeof(char));*/
+		memmove(string, head, (tail-head+2 )*sizeof(char));
 
 	return string;
 }
